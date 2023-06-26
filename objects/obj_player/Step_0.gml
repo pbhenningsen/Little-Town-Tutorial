@@ -113,7 +113,7 @@ if nearbyNPC {
 	}
 	//Pop up prompt
 	if (npcPrompt == noone || npcPrompt == undefined) {
-		npcPrompt = scr_showPrompt(nearbyNPC,nearbyNPC.x,nearbyNPC.y-450);
+		npcPrompt = scr_showPrompt(nearbyNPC,nearbyNPC.x,nearbyNPC.y-450);//was 450
 	}
 	show_debug_message("obj_player has found an NPC!");
 }

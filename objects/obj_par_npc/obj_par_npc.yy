@@ -30,6 +30,18 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"looprange01","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"30","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"looprange02","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"240","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"myText","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"\"Why, hello there!\"","varType":2,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"myItem","filters":[
+        "GMObject",
+      ],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"noone","varType":5,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"itemTextHappy","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"\"Text for the right item.\"","varType":2,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"ItemTextSad","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"\"Text for the wrong item.\"","varType":2,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"itemTextDone","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"\"Thak you text.\"","varType":2,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"sequenceHappy","filters":[
+        "GMSequence",
+      ],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"noone","varType":5,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"sequenceSad","filters":[
+        "GMSequence",
+      ],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"noone","varType":5,},
   ],
   "solid": false,
   "spriteId": null,
