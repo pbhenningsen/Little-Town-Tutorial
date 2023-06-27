@@ -1,38 +1,53 @@
 /// @description Textbox test
 
-var _text;
+var _text, _seq;
 
 
 // if player has control
 if (global.playerControl == true) {
 	//If near an NPC
 	if (nearbyNPC) {
-		//if player does not have an item
-		if (hasItem == noone || hasItem == undefined) {
-			_text = nearbyNPC.myText;
-			if (!instance_exists(obj_textbox)) {
-				iii = instance_create_depth(nearbyNPC.x,nearbyNPC.y-400,-10000,obj_textbox);
-				iii.textToShow = _text;
+		// If NPC is still available
+		if (nearbyNPC.myState == npcState.normal) {
+			//if player does not have an item
+			if (hasItem == noone || hasItem == undefined) {
+				_text = nearbyNPC.myText;
+				if (!instance_exists(obj_textbox)) {
+					iii = instance_create_depth(nearbyNPC.x,nearbyNPC.y-400,-10000,obj_textbox);
+					iii.textToShow = _text;
+					}
+				}
+		//If player has item (and it still exists)
+		if (hasItem != noone && instance_exists(hasItem)) {
+			// If player has the correct item
+			if (hasItem.object_index == nearbyNPC.myItem) {
+				_text = nearbyNPC.itemTextHappy;
+				_seq = nearbyNPC.sequenceHappy;
+				//Check if we should remove item, mark NPC
+				alarm[1] = 10;
+				}
+			// Or if the player has the incorrect item
+			else {
+				_text = nearbyNPC.ItemTextSad;
+				_seq = nearbyNPC.sequenceSad;
+				}
+		//Create textbox
+		if (!instance_exists(obj_textbox)) {
+			iii = instance_create_depth(nearbyNPC.x,nearbyNPC.y-400,-10000,obj_textbox);
+			iii.textToShow = _text;
+			iii.sequenceToShow = _seq;
 			}
 		}
-	//If player has item (and it still exists)
-	if (hasItem != noone && instance_exists(hasItem)) {
-		// If player has the correct item
-		if (hasItem.object_index == nearbyNPC.myItem) {
-			_text = nearbyNPC.itemTextHappy;
-		}
-		// Or if the player has the incorrect item
-		else {
-			_text = nearbyNPC.ItemTextSad;
-		}
-	//Create textbox
+	}
+	//If NPC is "done"
+	if (nearbyNPC.myState == npcState.done) {
+		_text = nearbyNPC.itemTextDone;
 		if (!instance_exists(obj_textbox)) {
-		iii = instance_create_depth(nearbyNPC.x,nearbyNPC.y-400,-10000,obj_textbox);
-		iii.textToShow = _text;
-		}
+			iii = instance_create_depth(nearbyNPC.x,nearbyNPC.y-400,- 10000,obj_textbox);	
+			iii.textToShow = _text;
 		}
 	}
-	}
+}
 	//If near an item
 	if (nearbyItem && !nearbyNPC) {
 		//if player doesn't have an item
@@ -69,5 +84,5 @@ if (global.playerControl == true) {
 		  hasItem = noone;
 	  }
   }
-  
+}
   
