@@ -5,6 +5,7 @@ global.playerControl = true;
 townBGMVolume = audio_sound_get_gain(snd_townBGM);
 townAmbienceVolume = audio_sound_get_gain(snd_townAmbience);
 global.gameOver = false;
+global.gameStart = false;
 
 // Player states
 enum playerState {

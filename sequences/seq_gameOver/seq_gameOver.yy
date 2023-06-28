@@ -15,10 +15,10 @@
     "Keyframes": [
       {"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MessageEventKeyframe","resourceVersion":"1.0","Events":[
               "sequenceStart",
-            ],},},"Disabled":false,"id":"153d2964-11b3-4fd1-b3f4-a7f1f53bce7e","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            ],},},"Disabled":false,"id":"cb572fbd-b077-4619-91d0-34a782597c58","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
       {"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MessageEventKeyframe","resourceVersion":"1.0","Events":[
-              "SequenceEnd",
-            ],},},"Disabled":false,"id":"b6af899b-1158-4dbd-8151-e23491e773a5","IsCreationKey":false,"Key":239.9999,"Length":1.0,"Stretch":false,},
+              "sequenceEnd",
+            ],},},"Disabled":false,"id":"0202012d-9433-4e10-9d28-882b96563361","IsCreationKey":false,"Key":239.9999,"Length":1.0,"Stretch":false,},
     ],
   },
   "eventStubScript": null,
@@ -28,7 +28,11 @@
   "moments": {
     "resourceType": "KeyframeStore<MomentsEventKeyframe>",
     "resourceVersion": "1.0",
-    "Keyframes": [],
+    "Keyframes": [
+      {"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MomentsEventKeyframe","resourceVersion":"1.0","Events":[
+              "scr_gameOver",
+            ],},},"Disabled":false,"id":"506fd01f-3f2d-4533-bfda-cc73c1a48633","IsCreationKey":false,"Key":239.0,"Length":1.0,"Stretch":false,},
+    ],
   },
   "parent": {
     "name": "Sequences",
